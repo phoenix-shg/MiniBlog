@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "1RtuGT+JQUgANp+BHY/5QdPRWNQeJfpawEPWC8Qm+RqNgIWD22k1Di9Oo4di2jURTdwdyKbwSxvvGnrovME4eQ==",
+  "success": true,
+  "projectFilePath": "/Users/shiwei.fu/RiderProjects/MiniBlog/MiniBlog/MiniBlog.csproj",
+  "expectedPackageFiles": [
+    "/Users/shiwei.fu/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/stylecop.analyzers/1.1.118/stylecop.analyzers.1.1.118.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/shiwei.fu/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

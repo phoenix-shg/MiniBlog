@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dGxb3KM4tkDYi3eWI/sdkSJo8cappeSFRgIcmcTe1jQ=",
+  "Source": "MiniBlog",
+  "BasePath": "_content/MiniBlog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

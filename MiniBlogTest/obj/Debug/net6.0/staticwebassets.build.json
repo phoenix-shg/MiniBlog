@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "rtTRhcE4v3AXfgSatmp2vE8jopcgRtmabiCIxowUPsc=",
+  "Source": "MiniBlogTest",
+  "BasePath": "_content/MiniBlogTest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/shiwei.fu/RiderProjects/MiniBlog/MiniBlog/MiniBlog.csproj",
+      "Version": 2,
+      "Source": "MiniBlog",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
