@@ -16,8 +16,8 @@ namespace MiniBlogTest.ControllerTest
             : base()
 
         {
-            UserStoreWillReplaceInFuture.instance.Init();
-            ArticleStoreWillReplaceInFuture.instance.Init();
+            UserStoreWillReplaceInFuture.Instance.Init();
+            ArticleStoreWillReplaceInFuture.Instance.Init();
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace MiniBlogTest.ControllerTest
             Assert.Equal(HttpStatusCode.Created, registerResponse.StatusCode);
 
             var users = await GetUsers(client);
-            Assert.Equal(1, users.Count);
+            Assert.Single(users);
             Assert.Equal(email, users[0].Email);
             Assert.Equal(userName, users[0].Name);
         }
@@ -143,8 +143,8 @@ namespace MiniBlogTest.ControllerTest
 
         private static HttpClient GetClient()
         {
-            var application = new WebApplicationFactory<Program>();
-            return application.CreateClient();
+            var factory = new WebApplicationFactory<Program>();
+            return factory.CreateClient();
         }
     }
 }

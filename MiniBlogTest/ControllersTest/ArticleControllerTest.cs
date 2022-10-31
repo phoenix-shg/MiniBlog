@@ -14,8 +14,8 @@
     {
         public ArticleControllerTest()
         {
-            UserStoreWillReplaceInFuture.instance.Init();
-            ArticleStoreWillReplaceInFuture.instance.Init();
+            UserStoreWillReplaceInFuture.Instance.Init();
+            ArticleStoreWillReplaceInFuture.Instance.Init();
         }
 
         [Fact]
@@ -80,8 +80,8 @@
 
         private static HttpClient GetClient()
         {
-            var application = new WebApplicationFactory<Program>();
-            return application.CreateClient();
+            var factory = new WebApplicationFactory<Program>();
+            return factory.CreateClient();
         }
     }
 }

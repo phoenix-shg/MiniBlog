@@ -1,26 +1,37 @@
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Components.Server;
-using MiniBlog.Model;
-
 namespace MiniBlog.Stores
 {
+    using Model;
+
     public class UserStoreWillReplaceInFuture
     {
+        private List<User> users;
+
+        public static readonly UserStoreWillReplaceInFuture Instance = new UserStoreWillReplaceInFuture();
+
         private UserStoreWillReplaceInFuture()
         {
             Init();
         }
 
-        public static readonly UserStoreWillReplaceInFuture instance = new();
+        public List<User> GetAll()
+        {
+            return this.users;
+        }
 
-        public List<User> Users { get; private set; }
+        public User Save(User user)
+        {
+            this.users.Add(user);
+            return user;
+        }
 
-        /// <summary>
-        /// This is for test only, please help resolve!
-        /// </summary>
+        public bool Delete(User user)
+        {
+            return this.users.Remove(user);
+        }
+
         public void Init()
         {
-            Users = new List<User>();
+            users = new List<User>();
         }
     }
 }

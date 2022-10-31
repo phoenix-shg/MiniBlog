@@ -1,25 +1,42 @@
-using System;
-using System.Collections.Generic;
-using MiniBlog.Model;
-
 namespace MiniBlog.Stores
 {
+    using MiniBlog.Model;
+
     public class ArticleStoreWillReplaceInFuture
     {
+        private List<Article> articles;
+
         private ArticleStoreWillReplaceInFuture()
         {
             this.Init();
         }
 
-        public static readonly ArticleStoreWillReplaceInFuture instance = new();
+        public static readonly ArticleStoreWillReplaceInFuture Instance = new ArticleStoreWillReplaceInFuture();
 
-        public List<Article> Articles { get;  set; }
+        public Article Save(Article article)
+        {
+            this.articles.Add(article);
+            return article;
+        }
 
+        public List<Article> GetAll()
+        {
+            return this.articles;
+        }
+
+        public bool Delete(Article articles)
+        {
+            return this.articles.Remove(articles);
+        }
+        
+        /// <summary>
+        /// This is for test only, please help resolve!
+        /// </summary>
         public void Init()
         {
-            Articles = new List<Article>();
-            Articles.Add(new Article(null, "Happy new year", "Happy 2021 new year"));
-            Articles.Add(new Article(null, "Happy Halloween", "Halloween is coming"));
+            articles = new List<Article>();
+            articles.Add(new Article(null, "Happy new year", "Happy 2021 new year"));
+            articles.Add(new Article(null, "Happy Halloween", "Halloween is coming"));
         }
     }
 }
