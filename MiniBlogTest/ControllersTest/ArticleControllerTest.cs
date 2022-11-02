@@ -6,6 +6,7 @@
     using Microsoft.AspNetCore.Mvc.Testing;
     using MiniBlog.Model;
     using MiniBlog.Stores;
+    using Moq;
     using Newtonsoft.Json;
     using Xunit;
 
@@ -31,8 +32,14 @@
 
         [Fact]
         public async void Should_create_article_fail_when_ArticleStore_unavailable()
-        {
-            var client = GetClient();
+        {            var articleStoreMocker = new Mock<IArticleStore>();
+            articleStoreMocker.Setup(store => store.Save(It.IsAny<Article>())).Throws<Exception>();
+            var factory = new WebApplicationFactory<Program>();
+            var client = factory.WithWebHostBuilder(builder =>
+            {
+                builder.ConfigureServices(services => services.AddSingleton(ServiceProvider => articleStoreMocker.Object));
+            }).CreateClient();
+            
             string userNameWhoWillAdd = "Tom";
             string articleContent = "What a good day today!";
             string articleTitle = "Good day";

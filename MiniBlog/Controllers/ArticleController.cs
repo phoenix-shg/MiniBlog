@@ -10,6 +10,7 @@
     [Route("[controller]")]
     public class ArticleController : ControllerBase
     {
+        private IArticleStore _articleStore;
         [HttpGet]
         public List<Article> List()
         {
@@ -17,7 +18,7 @@
         }
 
         [HttpPost]
-        public Article Create(Article article)
+        public ActionResult<Article> Create(Article article)
         {
             if (article.UserName != null)
             {
@@ -29,7 +30,7 @@
                 ArticleStoreWillReplaceInFuture.Instance.Save(article);
             }
 
-            return article;
+            return new CreatedResult("article",article);
         }
 
         [HttpGet("{id}")]
