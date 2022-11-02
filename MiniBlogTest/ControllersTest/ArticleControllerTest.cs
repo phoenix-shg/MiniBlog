@@ -52,7 +52,7 @@ public class ArticleControllerTest
             builder.ConfigureServices(services =>
             services.AddSingleton(ServiceProvider => articleSoreMocker.Object));
         }).CreateClient();
-        ;
+        
         string userNameWhoWillAdd = "Tom";
         string articleContent = "What a good day today!";
         string articleTitle = "Good day";
